@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 require_once('./vendor/autoload.php');
-require_once('index.php');
+require_once('./src/model/home.php');
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
 
 
-$loader = new FilesystemLoader(__DIR__.'./src/view/templates');
+$loader = new FilesystemLoader(__DIR__.'./../view/templates');
 $twig = new Environment($loader);
 
 $arr1 = array('name'=>'milan','addres'=>'Nawalparasi');
