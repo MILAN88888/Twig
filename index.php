@@ -27,6 +27,6 @@ while ($row = mysqli_fetch_assoc($result))
 }
 // $passRst = $result->fetch_assoc();
 // print_r($passRst);
-print_r($arr);
+ require('twig.php');
 
 ?>
