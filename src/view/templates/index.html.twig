@@ -14,10 +14,17 @@
         {{ key }} => {{ value }} <br>
     {% endfor %}
     <h1>Second pass values</h1>
-    {% for user in usr %}
-    {{user.user_name}}
-    {{user.user_address}}
-    {% endfor %}
+    <table border="1">
+        <thead><tr><th>Name</th><th>Address</th></tr></thead>
+        <tbody>
+            {% for user in usr %}
+            <tr>
+            <td> {{user.user_name}}</td>
+            <td>{{user.user_address}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 <h1>Method range </h1>
     {% for i in range(low=1, high=10, step=2) %}
     {{ i }},
@@ -27,8 +34,10 @@
     {{ i }},
 {% endfor %}
 <h1>apply....</h1>
+
 {% apply upper %}
     This text becomes uppercase
 {% endapply %}
 
  {% endblock %}
+ {{include('footer.html.twig')}}
